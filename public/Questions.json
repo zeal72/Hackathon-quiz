@@ -1,0 +1,202 @@
+[
+	{
+		"question": "What is the boiling point of water at sea level?",
+		"options": [
+			"100°C",
+			"90°C",
+			"120°C",
+			"110°C"
+		],
+		"correctAnswer": "100°C"
+	},
+	{
+		"question": "Which gas do plants absorb from the atmosphere?",
+		"options": [
+			"Oxygen",
+			"Carbon Dioxide",
+			"Nitrogen",
+			"Hydrogen"
+		],
+		"correctAnswer": "Carbon Dioxide"
+	},
+	{
+		"question": "Who is known as the father of modern physics?",
+		"options": [
+			"Isaac Newton",
+			"Galileo Galilei",
+			"Albert Einstein",
+			"Niels Bohr"
+		],
+		"correctAnswer": "Albert Einstein"
+	},
+	{
+		"question": "What is the powerhouse of the cell?",
+		"options": [
+			"Nucleus",
+			"Ribosome",
+			"Mitochondria",
+			"Chloroplast"
+		],
+		"correctAnswer": "Mitochondria"
+	},
+	{
+		"question": "Which planet is known as the Red Planet?",
+		"options": [
+			"Venus",
+			"Mars",
+			"Jupiter",
+			"Mercury"
+		],
+		"correctAnswer": "Mars"
+	},
+	{
+		"question": "What is H2O commonly known as?",
+		"options": [
+			"Salt",
+			"Water",
+			"Oxygen",
+			"Hydrogen"
+		],
+		"correctAnswer": "Water"
+	},
+	{
+		"question": "Which of the following is not a renewable energy source?",
+		"options": [
+			"Solar",
+			"Wind",
+			"Coal",
+			"Geothermal"
+		],
+		"correctAnswer": "Coal"
+	},
+	{
+		"question": "What is the unit of electrical resistance?",
+		"options": [
+			"Ohm",
+			"Watt",
+			"Volt",
+			"Ampere"
+		],
+		"correctAnswer": "Ohm"
+	},
+	{
+		"question": "Which blood cells help in clotting?",
+		"options": [
+			"Red blood cells",
+			"White blood cells",
+			"Platelets",
+			"Plasma"
+		],
+		"correctAnswer": "Platelets"
+	},
+	{
+		"question": "What is the chemical symbol for gold?",
+		"options": [
+			"Gd",
+			"Au",
+			"Ag",
+			"Ge"
+		],
+		"correctAnswer": "Au"
+	},
+	{
+		"question": "What is the most common gas in the Earth's atmosphere?",
+		"options": [
+			"Oxygen",
+			"Nitrogen",
+			"Carbon Dioxide",
+			"Argon"
+		],
+		"correctAnswer": "Nitrogen"
+	},
+	{
+		"question": "Who invented the telephone?",
+		"options": [
+			"Alexander Graham Bell",
+			"Thomas Edison",
+			"Nikola Tesla",
+			"Elisha Gray"
+		],
+		"correctAnswer": "Alexander Graham Bell"
+	},
+	{
+		"question": "What is the formula for the area of a circle?",
+		"options": [
+			"πr²",
+			"2πr",
+			"πd",
+			"πr"
+		],
+		"correctAnswer": "πr²"
+	},
+	{
+		"question": "Which element is most abundant in the Earth's crust?",
+		"options": [
+			"Oxygen",
+			"Silicon",
+			"Iron",
+			"Magnesium"
+		],
+		"correctAnswer": "Oxygen"
+	},
+	{
+		"question": "Which type of rock is formed from volcanic activity?",
+		"options": [
+			"Igneous",
+			"Sedimentary",
+			"Metamorphic",
+			"Limestone"
+		],
+		"correctAnswer": "Igneous"
+	},
+	{
+		"question": "What is the name of the closest star to Earth?",
+		"options": [
+			"Sirius",
+			"Proxima Centauri",
+			"The Sun",
+			"Alpha Centauri"
+		],
+		"correctAnswer": "The Sun"
+	},
+	{
+		"question": "What is the largest organ in the human body?",
+		"options": [
+			"Heart",
+			"Brain",
+			"Skin",
+			"Liver"
+		],
+		"correctAnswer": "Skin"
+	},
+	{
+		"question": "What is the chemical symbol for sodium?",
+		"options": [
+			"Na",
+			"S",
+			"N",
+			"Sn"
+		],
+		"correctAnswer": "Na"
+	},
+	{
+		"question": "Which planet is the largest in the solar system?",
+		"options": [
+			"Saturn",
+			"Earth",
+			"Jupiter",
+			"Neptune"
+		],
+		"correctAnswer": "Jupiter"
+	},
+	{
+		"question": "What is the boiling point of water at sea level in Fahrenheit?",
+		"options": [
+			"212°F",
+			"100°F",
+			"180°F",
+			"200°F"
+		],
+		"correctAnswer": "212°F"
+	}
+]
