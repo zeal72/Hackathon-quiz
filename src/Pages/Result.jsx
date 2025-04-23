@@ -8,6 +8,10 @@ import { calculateResults, getPerformanceMessage } from '../utilis/utilities';
 function QuestionResultCard({ question, options, selectedOption, correctOption }) {
 	const isCorrect = Number(selectedOption) === Number(correctOption);
 
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}, [currentPage]);
+
 	return (
 		<div className={`bg-white/5 p-6 rounded-xl shadow-md backdrop-blur-md ${isCorrect ? 'border-l-4 border-green-500' : 'border-l-4 border-red-500'
 			}`}>
