@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { getDatabase, ref as dbRef, get } from 'firebase/database';
-
+import { getDatabase, ref as dbRef, get, push, set } from 'firebase/database';
 import QuestionCard from '../Components/QuestionCard';
 import ProgressBar from '../Components/ProgressBar';
 import AllQuestionsData from '../../public/Questions.json';
@@ -125,6 +124,8 @@ export default function QuizPage() {
 		setIsSubmitting(true);
 
 		const score = calculateScore();
+		const timeTaken = TOTAL_TIME - timeLeft;
+
 		const resultsData = {
 			username,
 			score,
@@ -133,8 +134,10 @@ export default function QuizPage() {
 				Object.entries(selectedOptions).map(([k, v]) => [k, Number(v)])
 			),
 			questions: quizQuestions,
+			timeTaken, // ✅ add it here
 			timestamp: new Date().toISOString()
 		};
+
 
 		// push to your 'quizResults' ref…
 		const resultsRef = dbRef(db, 'quizResults');

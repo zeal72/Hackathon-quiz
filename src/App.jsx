@@ -15,7 +15,7 @@ function ProtectedRoute() {
   const { user, loading } = useAuth();
 
   if (loading) {
-    // While checking auth status, show a spinner
+    // While checking auth status, show a
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin h-10 w-10 border-4 border-purple-500 border-t-transparent rounded-full"></div>

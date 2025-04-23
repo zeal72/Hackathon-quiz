@@ -16,6 +16,7 @@ function QuestionCard({ question, options, qIndex, selected, onSelect, disabled 
 					const isSelected = i === selected;
 					return (
 						<button
+							type="button"
 							key={i}
 							onClick={() => handleClick(i)}
 							disabled={disabled}
