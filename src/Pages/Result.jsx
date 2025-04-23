@@ -1,13 +1,14 @@
 // ResultsPage.js
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useLocation, useNavigate, } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CheckCircle2, XCircle } from 'lucide-react';
 import { calculateResults, getPerformanceMessage } from '../utilis/utilities';
 
 function QuestionResultCard({ question, options, selectedOption, correctOption }) {
 	const isCorrect = Number(selectedOption) === Number(correctOption);
-
+	const [currentPage, setCurrentPage] = useState(0);
 	useEffect(() => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}, [currentPage]);
@@ -157,6 +158,12 @@ export default function ResultsPage() {
 						className="px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg font-medium transition-colors"
 					>
 						Retry Quiz
+					</button>
+					<button
+						onClick={() => navigate('/leaderboard')}
+						className="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-medium transition-colors"
+					>
+						LeaderBoard
 					</button>
 				</div>
 			</main>

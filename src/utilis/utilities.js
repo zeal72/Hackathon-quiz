@@ -1,5 +1,7 @@
 // utilities.js
-export function calculateResults(questions = [], selectedOptions = {}) {
+import { getDatabase, ref, push, set } from 'firebase/database';
+
+export function calculateResults(questions = [], selectedOptions = {}, username, timeTaken) {
 	let score = 0;
 	const results = questions.map((question, index) => {
 		const userAnswerIndex = Number(selectedOptions[String(index)]);
@@ -14,7 +16,39 @@ export function calculateResults(questions = [], selectedOptions = {}) {
 			isCorrect,
 		};
 	});
+
+	// Save results to Firebase for leaderboard
+	saveQuizResults({
+		username,
+		score,
+		totalQuestions: questions.length,
+		timeTaken,
+		timestamp: new Date().toISOString()
+	});
+
 	return { score, results };
+}
+
+async function saveQuizResults(resultsData) {
+	try {
+		const db = getDatabase();
+		const leaderboardRef = ref(db, 'leaderboard');
+		const newEntryRef = push(leaderboardRef);
+
+		await set(newEntryRef, {
+			username: resultsData.username,
+			score: resultsData.score,
+			totalQuestions: resultsData.totalQuestions,
+			accuracy: ((resultsData.score / resultsData.totalQuestions) * 100).toFixed(1),
+			timeTaken: resultsData.timeTaken,
+			timestamp: resultsData.timestamp
+		});
+
+		console.log('Leaderboard data saved successfully');
+	} catch (error) {
+		console.error('Error saving to leaderboard:', error);
+		throw error;
+	}
 }
 
 export function getPerformanceMessage(score, total) {

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiLock, FiMail } from 'react-icons/fi';
+import { FiLock, FiMail, FiEye, FiEyeOff } from 'react-icons/fi';  // ← added FiEye, FiEyeOff
 import { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Firebase.config';
@@ -11,6 +11,7 @@ import globalStyles from './Globalstyles';
 export default function LoginPage() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	const [showPassword, setShowPassword] = useState(false);     // ← toggle state
 	const [error, setError] = useState('');
 	const [loading, setLoading] = useState(false);
 	const navigate = useNavigate();
@@ -47,10 +48,11 @@ export default function LoginPage() {
 	return (
 		<>
 			<style>{globalStyles}</style>
+			<ToastContainer />
 
 			<div className="min-h-screen bg-gradient-to-br from-[#2A0944] via-[#3B185F] to-[#125B50] relative overflow-hidden flex items-center justify-center p-4">
 				{/* Floating Blobs */}
-				<div className="absolute w-full h-full inset-0">
+				<div className="absolute inset-0">
 					<div className="animate-float absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-purple-500/20 to-teal-400/20 rounded-full blur-2xl" />
 					<div className="animate-float animation-delay-2000 absolute top-60 right-32 w-48 h-48 bg-gradient-to-r from-pink-400/20 to-blue-400/20 rounded-full blur-xl" />
 				</div>
@@ -84,7 +86,10 @@ export default function LoginPage() {
 					<form onSubmit={handleLogin}>
 						{/* Email Input */}
 						<div className="relative group mb-6">
-							<label htmlFor="email" className="text-gray-500 transition-all pointer-events-none group-focus-within:text-sm group-focus-within:text-purple-800">
+							<label
+								htmlFor="email"
+								className="text-gray-500 transition-all pointer-events-none group-focus-within:text-sm group-focus-within:text-purple-800"
+							>
 								Email
 							</label>
 							<input
@@ -92,27 +97,33 @@ export default function LoginPage() {
 								type="email"
 								value={email}
 								onChange={(e) => setEmail(e.target.value)}
-								className="w-full bg-gray-50 border border-gray-300 rounded-xl py-4 px-6 pr-12 text-gray-800 placeholder-transparent focus:outline-none focus:border-purple-800 focus:ring-2 focus:ring-purple-300 transition-all"
 								placeholder="Email"
+								className="w-full bg-gray-50 border border-gray-300 rounded-xl py-4 px-6 pr-12 text-gray-800 placeholder-transparent focus:outline-none focus:border-purple-800 focus:ring-2 focus:ring-purple-300 transition-all"
 							/>
 							<div className="absolute right-4 bottom-5 text-gray-400">
 								<FiMail />
 							</div>
 						</div>
 
-						{/* Password Input */}
+						{/* Password Input with Toggle */}
 						<div className="relative group mb-6">
-							<label htmlFor="password" className="text-gray-500 transition-all pointer-events-none group-focus-within:text-sm group-focus-within:text-purple-800">
+							<label
+								htmlFor="password"
+								className="text-gray-500 transition-all pointer-events-none group-focus-within:text-sm group-focus-within:text-purple-800"
+							>
 								Password
 							</label>
 							<input
 								id="password"
-								type="password"
+								type={showPassword ? 'text' : 'password'}    // ← switch type
 								value={password}
 								onChange={(e) => setPassword(e.target.value)}
-								className="w-full bg-gray-50 border border-gray-300 rounded-xl py-4 px-6 pr-12 text-gray-800 placeholder-transparent focus:outline-none focus:border-purple-800 focus:ring-2 focus:ring-purple-300 transition-all"
 								placeholder="Password"
+								className="w-full bg-gray-50 border border-gray-300 rounded-xl py-4 px-6 pr-12 text-gray-800 placeholder-transparent focus:outline-none focus:border-purple-800 focus:ring-2 focus:ring-purple-300 transition-all"
 							/>
+							<div className="absolute right-10 bottom-5 text-gray-400 cursor-pointer" onClick={() => setShowPassword(v => !v)}>
+								{showPassword ? <FiEyeOff /> : <FiEye />}    {/* ← toggle icon */}
+							</div>
 							<div className="absolute right-4 bottom-5 text-gray-400">
 								<FiLock />
 							</div>
@@ -141,7 +152,7 @@ export default function LoginPage() {
 					</form>
 				</motion.div>
 
-				{/* Mascot */}
+				{/* Mascot (optional) */}
 				<motion.div
 					className="hidden lg:block absolute right-20 xl:right-40"
 					initial={{ opacity: 0, x: 20 }}
@@ -152,9 +163,6 @@ export default function LoginPage() {
 					</svg>
 				</motion.div>
 			</div>
-
-			{/* Toast Container */}
-			<ToastContainer />
 		</>
 	);
 }
