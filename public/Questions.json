@@ -7,196 +7,976 @@
 			"120°C",
 			"110°C"
 		],
-		"correctAnswer": "100°C"
+		"correctAnswer": 0
 	},
 	{
-		"question": "Which gas do plants absorb from the atmosphere?",
-		"options": [
-			"Oxygen",
-			"Carbon Dioxide",
-			"Nitrogen",
-			"Hydrogen"
-		],
-		"correctAnswer": "Carbon Dioxide"
-	},
-	{
-		"question": "Who is known as the father of modern physics?",
-		"options": [
-			"Isaac Newton",
-			"Galileo Galilei",
-			"Albert Einstein",
-			"Niels Bohr"
-		],
-		"correctAnswer": "Albert Einstein"
-	},
-	{
-		"question": "What is the powerhouse of the cell?",
-		"options": [
-			"Nucleus",
-			"Ribosome",
-			"Mitochondria",
-			"Chloroplast"
-		],
-		"correctAnswer": "Mitochondria"
-	},
-	{
-		"question": "Which planet is known as the Red Planet?",
+		"question": "Which planet is known as the 'Red Planet'?",
 		"options": [
 			"Venus",
 			"Mars",
 			"Jupiter",
 			"Mercury"
 		],
-		"correctAnswer": "Mars"
-	},
-	{
-		"question": "What is H2O commonly known as?",
-		"options": [
-			"Salt",
-			"Water",
-			"Oxygen",
-			"Hydrogen"
-		],
-		"correctAnswer": "Water"
-	},
-	{
-		"question": "Which of the following is not a renewable energy source?",
-		"options": [
-			"Solar",
-			"Wind",
-			"Coal",
-			"Geothermal"
-		],
-		"correctAnswer": "Coal"
-	},
-	{
-		"question": "What is the unit of electrical resistance?",
-		"options": [
-			"Ohm",
-			"Watt",
-			"Volt",
-			"Ampere"
-		],
-		"correctAnswer": "Ohm"
-	},
-	{
-		"question": "Which blood cells help in clotting?",
-		"options": [
-			"Red blood cells",
-			"White blood cells",
-			"Platelets",
-			"Plasma"
-		],
-		"correctAnswer": "Platelets"
+		"correctAnswer": 1
 	},
 	{
 		"question": "What is the chemical symbol for gold?",
 		"options": [
+			"Go",
 			"Gd",
 			"Au",
-			"Ag",
-			"Ge"
+			"Ag"
 		],
-		"correctAnswer": "Au"
+		"correctAnswer": 2
 	},
 	{
-		"question": "What is the most common gas in the Earth's atmosphere?",
+		"question": "Which of the following is a primary color?",
+		"options": [
+			"Green",
+			"Orange",
+			"Purple",
+			"Blue"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "What is the value of π (pi) to two decimal places?",
+		"options": [
+			"3.14",
+			"3.41",
+			"3.12",
+			"3.16"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "Which bone is the longest in the human body?",
+		"options": [
+			"Radius",
+			"Femur",
+			"Tibia",
+			"Humerus"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "What is the SI unit of force?",
+		"options": [
+			"Watt",
+			"Joule",
+			"Newton",
+			"Pascal"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which organelle is known as the 'powerhouse' of the cell?",
+		"options": [
+			"Nucleus",
+			"Endoplasmic Reticulum",
+			"Golgi Apparatus",
+			"Mitochondria"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "Which element has the atomic number 1?",
+		"options": [
+			"Hydrogen",
+			"Helium",
+			"Lithium",
+			"Carbon"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "What is the square root of 81?",
+		"options": [
+			"8",
+			"9",
+			"7",
+			"10"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "Which gas makes up the majority of Earth's atmosphere?",
 		"options": [
 			"Oxygen",
-			"Nitrogen",
 			"Carbon Dioxide",
-			"Argon"
+			"Nitrogen",
+			"Hydrogen"
 		],
-		"correctAnswer": "Nitrogen"
+		"correctAnswer": 2
 	},
 	{
-		"question": "Who invented the telephone?",
+		"question": "What is the closest star to Earth?",
 		"options": [
-			"Alexander Graham Bell",
-			"Thomas Edison",
-			"Nikola Tesla",
-			"Elisha Gray"
+			"Proxima Centauri",
+			"Betelgeuse",
+			"Alpha Centauri",
+			"The Sun"
 		],
-		"correctAnswer": "Alexander Graham Bell"
+		"correctAnswer": 3
 	},
 	{
-		"question": "What is the formula for the area of a circle?",
+		"question": "DNA stands for:",
 		"options": [
-			"πr²",
-			"2πr",
-			"πd",
-			"πr"
+			"Deoxyribonucleic Acid",
+			"Diribonucleic Acid",
+			"Deoxyribose Nucleic Acid",
+			"Dioxynucleic Acid"
 		],
-		"correctAnswer": "πr²"
+		"correctAnswer": 0
 	},
 	{
-		"question": "Which element is most abundant in the Earth's crust?",
+		"question": "What is the hardest natural substance on Earth?",
+		"options": [
+			"Ruby",
+			"Diamond",
+			"Graphite",
+			"Quartz"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "The process by which plants make their own food is called:",
+		"options": [
+			"Respiration",
+			"Transpiration",
+			"Photosynthesis",
+			"Germination"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "What is the primary function of red blood cells?",
+		"options": [
+			"Fighting Infection",
+			"Blood Clotting",
+			"Temperature Regulation",
+			"Oxygen Transport"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "In the periodic table, which element has the symbol 'K'?",
+		"options": [
+			"Potassium",
+			"Krypton",
+			"Calcium",
+			"Cobalt"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "What is the name of the galaxy containing our solar system?",
+		"options": [
+			"Andromeda",
+			"Milky Way",
+			"Triangulum",
+			"Sombrero"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "Which of the following is NOT a state of matter?",
+		"options": [
+			"Solid",
+			"Liquid",
+			"Energy",
+			"Gas"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which vitamin is produced when skin is exposed to sunlight?",
+		"options": [
+			"Vitamin A",
+			"Vitamin C",
+			"Vitamin B",
+			"Vitamin D"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "What is the chemical formula for water?",
+		"options": [
+			"H₂O",
+			"CO₂",
+			"O₂",
+			"CH₄"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "How many bones are in the adult human body?",
+		"options": [
+			"206",
+			"206",
+			"212",
+			"200"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "Which planet has the most moons?",
+		"options": [
+			"Earth",
+			"Mars",
+			"Saturn",
+			"Jupiter"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which of these is NOT one of Newton's Laws of Motion?",
+		"options": [
+			"Objects in motion stay in motion",
+			"Force equals mass times acceleration",
+			"Every action has an equal and opposite reaction",
+			"Energy can neither be created nor destroyed"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "What is the smallest prime number?",
+		"options": [
+			"2",
+			"1",
+			"3",
+			"0"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "What process converts sugar to energy in the body's cells?",
+		"options": [
+			"Photosynthesis",
+			"Cellular respiration",
+			"Fermentation",
+			"Digestion"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "Which of these elements is a noble gas?",
 		"options": [
 			"Oxygen",
-			"Silicon",
-			"Iron",
-			"Magnesium"
+			"Chlorine",
+			"Argon",
+			"Sodium"
 		],
-		"correctAnswer": "Oxygen"
-	},
-	{
-		"question": "Which type of rock is formed from volcanic activity?",
-		"options": [
-			"Igneous",
-			"Sedimentary",
-			"Metamorphic",
-			"Limestone"
-		],
-		"correctAnswer": "Igneous"
-	},
-	{
-		"question": "What is the name of the closest star to Earth?",
-		"options": [
-			"Sirius",
-			"Proxima Centauri",
-			"The Sun",
-			"Alpha Centauri"
-		],
-		"correctAnswer": "The Sun"
+		"correctAnswer": 2
 	},
 	{
 		"question": "What is the largest organ in the human body?",
 		"options": [
 			"Heart",
 			"Brain",
-			"Skin",
-			"Liver"
+			"Liver",
+			"Skin"
 		],
-		"correctAnswer": "Skin"
+		"correctAnswer": 3
 	},
 	{
-		"question": "What is the chemical symbol for sodium?",
+		"question": "What is the freezing point of water in Fahrenheit?",
 		"options": [
-			"Na",
-			"S",
-			"N",
-			"Sn"
+			"32°F",
+			"0°F",
+			"100°F",
+			"212°F"
 		],
-		"correctAnswer": "Na"
+		"correctAnswer": 0
 	},
 	{
-		"question": "Which planet is the largest in the solar system?",
+		"question": "Which planet is known as Earth's 'sister planet' due to its similar size?",
 		"options": [
-			"Saturn",
-			"Earth",
-			"Jupiter",
+			"Mars",
+			"Venus",
+			"Mercury",
 			"Neptune"
 		],
-		"correctAnswer": "Jupiter"
+		"correctAnswer": 1
 	},
 	{
-		"question": "What is the boiling point of water at sea level in Fahrenheit?",
+		"question": "How many sides does a hexagon have?",
 		"options": [
-			"212°F",
-			"100°F",
-			"180°F",
-			"200°F"
+			"5",
+			"7",
+			"6",
+			"8"
 		],
-		"correctAnswer": "212°F"
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which of these animals is NOT a marsupial?",
+		"options": [
+			"Kangaroo",
+			"Koala",
+			"Wombat",
+			"Elephant"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "What is absolute zero in Celsius?",
+		"options": [
+			"-273.15°C",
+			"-100°C",
+			"0°C",
+			"-459.67°C"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "Which planet is closest to the Sun?",
+		"options": [
+			"Venus",
+			"Mercury",
+			"Earth",
+			"Mars"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "Which gas do plants absorb from the atmosphere?",
+		"options": [
+			"Oxygen",
+			"Nitrogen",
+			"Carbon Dioxide",
+			"Hydrogen"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "What is the most abundant element in the Earth's crust?",
+		"options": [
+			"Silicon",
+			"Iron",
+			"Calcium",
+			"Oxygen"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "What is the speed of light in a vacuum?",
+		"options": [
+			"299,792,458 meters per second",
+			"300,000 meters per second",
+			"186,000 miles per hour",
+			"300,000 kilometers per hour"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "What is the unit of electrical resistance?",
+		"options": [
+			"Volt",
+			"Ohm",
+			"Ampere",
+			"Watt"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "How many electrons are in the outermost shell of a Neon atom?",
+		"options": [
+			"2",
+			"6",
+			"8",
+			"10"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which blood type is known as the universal donor?",
+		"options": [
+			"AB+",
+			"B-",
+			"A+",
+			"O-"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "What is the value of the mathematical constant 'e' to 2 decimal places?",
+		"options": [
+			"2.72",
+			"3.14",
+			"1.62",
+			"1.41"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "What is the main component of natural gas?",
+		"options": [
+			"Propane",
+			"Methane",
+			"Butane",
+			"Ethane"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "Which of these is a compound machine?",
+		"options": [
+			"Lever",
+			"Wheel and axle",
+			"Scissors",
+			"Inclined plane"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "What part of the brain is responsible for coordination and balance?",
+		"options": [
+			"Cerebrum",
+			"Medulla",
+			"Hypothalamus",
+			"Cerebellum"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "The moon orbits the Earth in approximately how many days?",
+		"options": [
+			"27.3 days",
+			"30 days",
+			"24 days",
+			"31 days"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "What molecule is responsible for carrying genetic information?",
+		"options": [
+			"RNA",
+			"DNA",
+			"Protein",
+			"Carbohydrate"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "What unit is used to measure sound intensity?",
+		"options": [
+			"Watt",
+			"Lumen",
+			"Decibel",
+			"Hertz"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which layer of Earth's atmosphere contains the ozone layer?",
+		"options": [
+			"Troposphere",
+			"Thermosphere",
+			"Mesosphere",
+			"Stratosphere"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "The process of converting a solid directly to a gas is called:",
+		"options": [
+			"Sublimation",
+			"Evaporation",
+			"Condensation",
+			"Deposition"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "Which element has the chemical symbol 'Fe'?",
+		"options": [
+			"Fluorine",
+			"Iron",
+			"Francium",
+			"Fermium"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "What is the sum of angles in a triangle?",
+		"options": [
+			"90 degrees",
+			"270 degrees",
+			"180 degrees",
+			"360 degrees"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which of these is not a mammal?",
+		"options": [
+			"Bat",
+			"Whale",
+			"Dolphin",
+			"Penguin"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "What type of electromagnetic radiation has the shortest wavelength?",
+		"options": [
+			"Gamma rays",
+			"X-rays",
+			"Ultraviolet",
+			"Visible light"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "How many chromosomes do humans normally have?",
+		"options": [
+			"23",
+			"46",
+			"42",
+			"48"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "Which blood vessels carry blood away from the heart?",
+		"options": [
+			"Capillaries",
+			"Veins",
+			"Arteries",
+			"Venules"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "What is the largest planet in our solar system?",
+		"options": [
+			"Saturn",
+			"Mars",
+			"Earth",
+			"Jupiter"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "What is the atomic number of Carbon?",
+		"options": [
+			"6",
+			"12",
+			"14",
+			"8"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "Which of these metals is liquid at room temperature?",
+		"options": [
+			"Lead",
+			"Mercury",
+			"Aluminum",
+			"Gold"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "What is the unit of power?",
+		"options": [
+			"Joule",
+			"Newton",
+			"Watt",
+			"Volt"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which of these is not a reptile?",
+		"options": [
+			"Snake",
+			"Lizard",
+			"Turtle",
+			"Frog"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "If a reaction absorbs heat, it is called:",
+		"options": [
+			"Endothermic",
+			"Exothermic",
+			"Isothermic",
+			"Anabolic"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "Which scientist formulated the theory of general relativity?",
+		"options": [
+			"Isaac Newton",
+			"Albert Einstein",
+			"Niels Bohr",
+			"Marie Curie"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "What is the pH value of a neutral solution?",
+		"options": [
+			"0",
+			"14",
+			"7",
+			"1"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "What is the only planet in our solar system that rotates clockwise?",
+		"options": [
+			"Mercury",
+			"Mars",
+			"Uranus",
+			"Venus"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "What is the smallest unit of life?",
+		"options": [
+			"Cell",
+			"Atom",
+			"Molecule",
+			"Organelle"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "Which type of rock forms from cooling magma?",
+		"options": [
+			"Sedimentary",
+			"Igneous",
+			"Metamorphic",
+			"Limestone"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "What metal is liquid at room temperature?",
+		"options": [
+			"Lead",
+			"Gold",
+			"Mercury",
+			"Silver"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which particle carries a negative electric charge?",
+		"options": [
+			"Proton",
+			"Neutron",
+			"Positron",
+			"Electron"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "In base 10, the number 10 is equivalent to which binary number?",
+		"options": [
+			"1010",
+			"1000",
+			"1100",
+			"1110"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "What is the approximate speed of sound in air at sea level?",
+		"options": [
+			"300 m/s",
+			"343 m/s",
+			"500 m/s",
+			"1,000 m/s"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "What is the symbol for the element Sodium?",
+		"options": [
+			"So",
+			"S",
+			"Na",
+			"Sd"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which vitamin is essential for blood clotting?",
+		"options": [
+			"Vitamin A",
+			"Vitamin B",
+			"Vitamin C",
+			"Vitamin K"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "What is the most abundant gas in the Earth's atmosphere?",
+		"options": [
+			"Nitrogen",
+			"Oxygen",
+			"Carbon Dioxide",
+			"Argon"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "Which planet has the Great Red Spot?",
+		"options": [
+			"Saturn",
+			"Jupiter",
+			"Mars",
+			"Neptune"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "What is the volume of a cube with side length 3 units?",
+		"options": [
+			"6 cubic units",
+			"9 cubic units",
+			"27 cubic units",
+			"81 cubic units"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which organ in the human body produces insulin?",
+		"options": [
+			"Liver",
+			"Kidney",
+			"Gallbladder",
+			"Pancreas"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "How many valence electrons does oxygen have?",
+		"options": [
+			"6",
+			"8",
+			"2",
+			"4"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "What is the study of fossils called?",
+		"options": [
+			"Archaeology",
+			"Paleontology",
+			"Geology",
+			"Anthropology"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "What is the formula for the area of a circle?",
+		"options": [
+			"2πr",
+			"πr",
+			"πr²",
+			"2πr²"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "What is the function of platelets in blood?",
+		"options": [
+			"Transport oxygen",
+			"Fight infections",
+			"Regulate body temperature",
+			"Help blood clot"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "A light-year measures:",
+		"options": [
+			"Distance",
+			"Time",
+			"Brightness",
+			"Temperature"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "What is the chemical symbol for silver?",
+		"options": [
+			"Si",
+			"Ag",
+			"Sr",
+			"Sv"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "What is the scientific name for the windpipe?",
+		"options": [
+			"Esophagus",
+			"Bronchi",
+			"Trachea",
+			"Pharynx"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which of these animals does NOT hibernate?",
+		"options": [
+			"Bears",
+			"Bats",
+			"Skunks",
+			"Penguins"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "What is the result of 0 divided by any number?",
+		"options": [
+			"0",
+			"1",
+			"Undefined",
+			"Infinity"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "Which of these is a characteristic of all living things?",
+		"options": [
+			"Movement",
+			"Respiration",
+			"Consciousness",
+			"Photosynthesis"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "What is the largest known asteroid in our solar system?",
+		"options": [
+			"Vesta",
+			"Pallas",
+			"Ceres",
+			"Hygiea"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which instrument is used to measure atmospheric pressure?",
+		"options": [
+			"Thermometer",
+			"Hygrometer",
+			"Anemometer",
+			"Barometer"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "The sum of all angles in a hexagon is:",
+		"options": [
+			"720 degrees",
+			"540 degrees",
+			"360 degrees",
+			"1080 degrees"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "At which temperature are Celsius and Fahrenheit equal?",
+		"options": [
+			"0 degrees",
+			"-40 degrees",
+			"100 degrees",
+			"32 degrees"
+		],
+		"correctAnswer": 1
+	},
+	{
+		"question": "What is the name of the process by which plants lose water vapor?",
+		"options": [
+			"Respiration",
+			"Photosynthesis",
+			"Transpiration",
+			"Condensation"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which of these diseases is caused by a virus?",
+		"options": [
+			"Tuberculosis",
+			"Malaria",
+			"Cholera",
+			"Influenza"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "What is the human body's largest organ?",
+		"options": [
+			"Skin",
+			"Liver",
+			"Brain",
+			"Heart"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "Which of these is NOT a renewable energy source?",
+		"options": [
+			"Solar",
+			"Wind",
+			"Coal",
+			"Hydroelectric"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "What is the chemical symbol for the element lead?",
+		"options": [
+			"Le",
+			"L",
+			"Pb",
+			"Ld"
+		],
+		"correctAnswer": 2
+	},
+	{
+		"question": "Which of these planets has the shortest day?",
+		"options": [
+			"Mars",
+			"Venus",
+			"Earth",
+			"Jupiter"
+		],
+		"correctAnswer": 3
+	},
+	{
+		"question": "How many faces does a dodecahedron have?",
+		"options": [
+			"12",
+			"20",
+			"8",
+			"10"
+		],
+		"correctAnswer": 0
+	},
+	{
+		"question": "Which metal is the best conductor of electricity?",
+		"options": [
+			"Aluminum",
+			"Silver",
+			"Gold",
+			"Copper"
+		],
+		"correctAnswer": 1
 	}
 ]
