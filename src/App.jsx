@@ -9,7 +9,7 @@ import QuizPage from './Pages/QuizPage1';
 import ResultsPage from './Pages/Result';
 import Leaderboard from './Pages/LeaderBoard';
 import { AuthProvider, useAuth } from './Components/AuthContext';
-
+import PWAInstallButton from './Components/PwaInstallButton';
 // Get English texts
 const text = getText("en");
 function ProtectedRoute() {
@@ -177,6 +177,7 @@ export default function App() {
             }
           />
         </Routes>
+        <PWAInstallButton />
       </Router>
     </AuthProvider>
   );
