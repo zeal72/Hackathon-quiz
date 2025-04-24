@@ -9,6 +9,7 @@ import ProgressBar from '../Components/ProgressBar';
 import AllQuestionsData from '../../public/Questions.json';
 import { getRandomQuestions } from '../utilis/randomquestions';
 
+import { getText } from '../config/strings';
 const QUESTIONS_PER_PAGE = 10;
 const TOTAL_PAGES = 2;
 const TOTAL_TIME = 300;
@@ -24,18 +25,16 @@ export default function QuizPage() {
 	const db = getDatabase();
 	const navigate = useNavigate();
 
-	// 1) State for the fetched username (fallback to 'User')
+	const text = getText("en");
 	const [username, setUsername] = useState('User');
 	const [loadingUser, setLoadingUser] = useState(true);
-
-	// Quiz states
 	const [currentPage, setCurrentPage] = useState(0);
 	const [selectedOptions, setSelectedOptions] = useState({});
 	const [timeLeft, setTimeLeft] = useState(TOTAL_TIME);
 	const [isSubmitted, setIsSubmitted] = useState(false);
 	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [isPageLoading, setIsPageLoading] = useState(false);
 
-	// Initialize quiz questions once
 	const [quizQuestions] = useState(() => {
 		const data = AllQuestionsData.map(q => ({
 			...q,
@@ -49,7 +48,6 @@ export default function QuizPage() {
 		}
 	});
 
-	// Fetch & subscribe to auth, then load username from DB
 	useEffect(() => {
 		const unsub = onAuthStateChanged(auth, async (user) => {
 			if (user) {
@@ -69,7 +67,6 @@ export default function QuizPage() {
 		return unsub;
 	}, [auth, db]);
 
-	// Timer logic
 	useEffect(() => {
 		if (timeLeft > 0 && !isSubmitted) {
 			const timer = setInterval(() => {
@@ -85,12 +82,10 @@ export default function QuizPage() {
 		}
 	}, [timeLeft, isSubmitted]);
 
-	// Auto-scroll on page change
 	useEffect(() => {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}, [currentPage]);
 
-	// Helpers
 	const answeredCount = Object.keys(selectedOptions).length;
 	const progress = (answeredCount / quizQuestions.length) * 100;
 	const currentQuestions = quizQuestions.slice(
@@ -98,7 +93,6 @@ export default function QuizPage() {
 		currentPage * QUESTIONS_PER_PAGE + QUESTIONS_PER_PAGE
 	);
 
-	// Check completeness of current page
 	const isPageComplete = () => {
 		const start = currentPage * QUESTIONS_PER_PAGE;
 		return currentQuestions.every((_, i) =>
@@ -106,19 +100,16 @@ export default function QuizPage() {
 		);
 	};
 
-	// Select handler
 	const handleOptionSelect = (qIdx, optIdx) => {
 		setSelectedOptions(prev => ({ ...prev, [qIdx]: optIdx }));
 	};
 
-	// Score calculator
 	const calculateScore = () =>
 		Object.entries(selectedOptions).reduce((sum, [idx, sel]) => {
 			const q = quizQuestions[Number(idx)];
 			return sum + (Number(sel) === q.correctAnswer ? 1 : 0);
 		}, 0);
 
-	// Submit: reuse your existing save logic
 	const handleSubmitQuiz = async () => {
 		if (isSubmitted || isSubmitting) return;
 		setIsSubmitting(true);
@@ -134,12 +125,10 @@ export default function QuizPage() {
 				Object.entries(selectedOptions).map(([k, v]) => [k, Number(v)])
 			),
 			questions: quizQuestions,
-			timeTaken, // ✅ add it here
+			timeTaken,
 			timestamp: new Date().toISOString()
 		};
 
-
-		// push to your 'quizResults' ref…
 		const resultsRef = dbRef(db, 'quizResults');
 		const newResRef = push(resultsRef);
 		await set(newResRef, resultsData).catch(e => console.error(e));
@@ -149,17 +138,71 @@ export default function QuizPage() {
 		setIsSubmitting(false);
 	};
 
-	// While loading the username, show a spinner
+	const handlePageChange = (direction) => {
+		setIsPageLoading(true);
+		setTimeout(() => {
+			setCurrentPage(p => {
+				const newPage = direction === 'next' ? p + 1 : p - 1;
+				return Math.max(0, Math.min(newPage, TOTAL_PAGES - 1));
+			});
+			setIsPageLoading(false);
+		}, 300);
+	};
+
 	if (loadingUser) {
 		return (
-			<div className="flex items-center justify-center min-h-screen text-white">
-				<div className="animate-spin h-10 w-10 border-4 border-purple-500 border-t-transparent rounded-full" />
+			<div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-[#0F172A] to-[#1E1B4B]">
+				<div className="flex flex-col items-center space-y-4">
+					{/* Enhanced Spinner */}
+					<div className="relative">
+						<svg className="animate-spin h-24 w-24 text-[#6366F1]" viewBox="0 0 24 24">
+							<circle
+								className="opacity-25"
+								cx="12"
+								cy="12"
+								r="10"
+								stroke="currentColor"
+								strokeWidth="4"
+								fill="none"
+							/>
+							<path
+								className="opacity-75"
+								fill="currentColor"
+								d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+							/>
+						</svg>
+
+						{/* Pulsing center dot */}
+						<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+							<div className="animate-ping h-4 w-4 rounded-full bg-purple-500 opacity-75"></div>
+							<div className="absolute top-0 left-0 h-4 w-4 rounded-full bg-gradient-to-br from-purple-500 to-blue-500"></div>
+						</div>
+					</div>
+
+					{/* Animated text */}
+					<div className="flex flex-col items-center space-y-2">
+						<p className="text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-lg font-semibold">
+							<p className="mt-4 text-purple-300">Loading your profile...</p>
+						</p>
+						<p className="text-purple-300 text-sm">{text.loading.subtext}</p>
+						<div className="flex space-x-2">
+							<div className="h-2 w-2 bg-purple-400 rounded-full animate-bounce"></div>
+							<div className="h-2 w-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+							<div className="h-2 w-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		);
 	}
-
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-[#1E1B4B] to-[#0F172A] text-white">
+			{isPageLoading && (
+				<div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+					<div className="animate-spin h-12 w-12 border-4 border-purple-500 border-t-transparent rounded-full" />
+				</div>
+			)}
+
 			<header className="sticky top-2 z-50 bg-[#1E293B]/90 backdrop-blur-sm shadow-lg max-w-[1200px] w-[90%] mx-auto rounded-b-xl">
 				<div className="flex flex-wrap items-center justify-between px-4 py-3 gap-4">
 					<h1 className="flex-1 text-xl sm:text-2xl font-bold">
@@ -213,7 +256,7 @@ export default function QuizPage() {
 					<div className="bg-[#1E293B]/80 border-t border-gray-700 p-4 flex justify-between">
 						<button
 							type="button"
-							onClick={() => setCurrentPage(p => Math.max(p - 1, 0))}
+							onClick={() => handlePageChange('prev')}
 							disabled={currentPage === 0 || isSubmitting}
 							className={`px-6 py-2 rounded-lg font-medium transition ${currentPage === 0 || isSubmitting
 								? 'bg-gray-700 text-gray-400 cursor-not-allowed'
@@ -227,11 +270,8 @@ export default function QuizPage() {
 							<button
 								type="button"
 								onClick={() => {
-									if (isPageComplete()) setCurrentPage(p => p + 1);
-									else
-										alert(
-											'Please answer all questions on this page before proceeding.'
-										);
+									if (isPageComplete()) handlePageChange('next');
+									else alert('Please answer all questions on this page before proceeding.');
 								}}
 								disabled={!isPageComplete() || isSubmitting}
 								className={`px-6 py-2 rounded-lg font-medium transition ${!isPageComplete() || isSubmitting
@@ -246,10 +286,7 @@ export default function QuizPage() {
 								type="button"
 								onClick={() => {
 									if (isPageComplete()) handleSubmitQuiz();
-									else
-										alert(
-											'Please answer all questions on this page before submitting.'
-										);
+									else alert('Please answer all questions on this page before submitting.');
 								}}
 								disabled={!isPageComplete() || isSubmitting}
 								className={`px-6 py-2 rounded-lg font-medium transition ${!isPageComplete() || isSubmitting
@@ -257,7 +294,14 @@ export default function QuizPage() {
 									: 'bg-purple-600 hover:bg-purple-500 text-white'
 									}`}
 							>
-								{isSubmitting ? 'Submitting...' : 'Submit Quiz'}
+								{isSubmitting ? (
+									<div className="flex items-center gap-2">
+										<div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
+										Submitting...
+									</div>
+								) : (
+									'Submit Quiz'
+								)}
 							</button>
 						)}
 					</div>
