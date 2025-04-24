@@ -29,8 +29,21 @@ function QuestionResultCard({ question, options, userAnswer, correctAnswer, isCo
 			<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 				{options.map((opt, i) => {
 					let style = "py-3 px-4 rounded-lg border bg-white/10 border-white/20";
-					if (i === correctAnswer) style = "py-3 px-4 rounded-lg border bg-green-600/80 border-green-400 text-white";
-					if (i === userAnswer && !isCorrect) style = "py-3 px-4 rounded-lg border bg-red-600/80 border-red-400 text-white";
+
+					// If this is the correct answer, style it green
+					if (i === correctAnswer) {
+						style = "py-3 px-4 rounded-lg border bg-green-600/80 border-green-400 text-white";
+					}
+
+					// If this is the user's answer and it's wrong, style it red
+					if (i === userAnswer && !isCorrect) {
+						style = "py-3 px-4 rounded-lg border bg-red-600/80 border-red-400 text-white";
+					}
+
+					// If this is the user's answer and it's correct, add a visual indicator
+					if (i === userAnswer && isCorrect) {
+						style = "py-3 px-4 rounded-lg border bg-green-600/80 border-green-400 text-white";
+					}
 
 					return (
 						<div key={i} className={style}>
