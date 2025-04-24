@@ -1,5 +1,6 @@
 // App.jsx
 import React from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import { getText } from './config/strings';
 
@@ -64,6 +65,16 @@ function ProtectedRoute() {
 
   return user ? <Outlet /> : <Navigate to="/login" replace />;
 }
+function PWADebug() {
+  useEffect(() => {
+    console.log('Service Worker Supported:', 'serviceWorker' in navigator);
+    console.log('Manifest Found:', document.querySelector('link[rel="manifest"]')?.href);
+    console.log('HTTPS:', window.location.protocol === 'https:');
+    console.log('Current Display Mode:', window.matchMedia('(display-mode: standalone)').matches);
+  }, []);
+
+  return null;
+}
 function PublicRoute({ children }) {
   const { user, loading } = useAuth();
   if (loading)
@@ -115,8 +126,22 @@ function PublicRoute({ children }) {
 }
 
 export default function App() {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('SW registered: ', registration);
+          })
+          .catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  }, []);
   return (
     <AuthProvider>
+      <PWADebug />
       <Router>
         <Routes>
           <Route
