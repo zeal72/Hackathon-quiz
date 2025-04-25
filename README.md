@@ -92,9 +92,9 @@ npm run build && npm run preview
 
 ## 📸 Application Preview
 
-| Authentication Flow | Quiz Interface | Leaderboard |
-|---------------------|----------------|-------------|
-| ![Auth Screen](/public/screenshots/auth-screen.png) | ![Quiz Interface](/public/quiz-interface.png) | ![Leaderboard](/public/Leaderboard.png) |
+| Quiz Interface | Leaderboard |
+|----------------|-------------|
+| ![Quiz Interface](/public/quiz-interface.png) | ![Leaderboard](/public/LeaderBoard.png) |
 
 ---
 
